@@ -1,5 +1,5 @@
 import { apiClient } from '@/lib/apiClient';
-import { User } from '@/types/types';
+import { Profile } from '@/types/types';
 
 export const profiles = async (skills: string[]) => {
   // return apiClient.post<Profile[]>(
@@ -11,7 +11,7 @@ export const profiles = async (skills: string[]) => {
   //   }
   // );
 
-  const response = await apiClient.get<User[]>('/users');
+  const response = await apiClient.get<Profile[]>('/users');
 
   const elements = response?.data?.map((user: any) => ({
     photo: user.username as string,

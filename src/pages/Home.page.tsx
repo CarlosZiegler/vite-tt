@@ -6,7 +6,6 @@ import { ProfilesTable } from '@/components/ProfileTable/ProfileTable';
 import { useFindProfiles } from '@/hooks/userProfiles';
 
 export function HomePage() {
-  // const { data: response, isLoading, error } = useUsers();
   const { data: profilesResponse, mutate, isLoading: isProfilesLoading, error } = useFindProfiles();
   const [skills, setSkills] = useState<string[]>([]);
 
